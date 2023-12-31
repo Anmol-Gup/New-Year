@@ -36,10 +36,10 @@ document.querySelector('button').addEventListener('click', (e) => {
         setColor(e.target, color[count])
         e.target.setAttribute('style', `color:${color[count]}; outline: 4px solid ${color[count]};box-shadow: 0 0 25px ${color[count]}, 0 0 50px ${color[count]}, 0 0 100px ${color[count]};`)
 
-        Array.from(document.getElementsByClassName('snowfall-flakes')).forEach(element => {
-                element.style.background=color[count]
-                element.style.boxShadow=`0 0 25px ${color[count]}, 0 0 50px ${color[count]}, 0 0 100px ${color[count]}`;
-        });
+        // Array.from(document.getElementsByClassName('snowfall-flakes')).forEach(element => {
+        //         element.style.background=color[count]
+        //         element.style.boxShadow=`0 0 25px ${color[count]}, 0 0 50px ${color[count]}, 0 0 100px ${color[count]}`;
+        // });
         count++;
     }
 })
