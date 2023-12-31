@@ -13,12 +13,28 @@ const color = [
     '#711DB0',
     '#F4CE14'
 ];
+let count = 0;
 
 const setColor = (element, color) => {
     element.setAttribute('style', `text-shadow: 0 0 25px ${color}, 0 0 50px ${color}, 0 0 100px ${color}`)
 }
 
-let count = 0;
+const addSnowflake = () => {
+    const snowflake = document.createElement('div')
+    snowflake.classList.add('snowflake')
+
+    const inner = document.createElement('div')
+    inner.classList.add('inner')
+    inner.appendChild(document.createTextNode('❅'))
+
+    snowflake.appendChild(inner)
+    document.querySelector('.snowflakes').appendChild(snowflake)
+}
+
+window.onload = () => {
+    for (let i = 1; i <= 60; i++)
+        addSnowflake()
+}
 
 document.querySelector('button').addEventListener('click', (e) => {
 
@@ -26,7 +42,7 @@ document.querySelector('button').addEventListener('click', (e) => {
         count = 0;
     else {
 
-        e.target.innerText='Click Again'
+        e.target.innerText = 'Click Again'
         const newyear = document.querySelector('#newyear')
         setColor(newyear, color[count])
 
@@ -35,11 +51,6 @@ document.querySelector('button').addEventListener('click', (e) => {
 
         setColor(e.target, color[count])
         e.target.setAttribute('style', `color:${color[count]}; outline: 4px solid ${color[count]};box-shadow: 0 0 25px ${color[count]}, 0 0 50px ${color[count]}, 0 0 100px ${color[count]};`)
-
-        // Array.from(document.getElementsByClassName('snowfall-flakes')).forEach(element => {
-        //         element.style.background=color[count]
-        //         element.style.boxShadow=`0 0 25px ${color[count]}, 0 0 50px ${color[count]}, 0 0 100px ${color[count]}`;
-        // });
         count++;
     }
 })
