@@ -32,7 +32,7 @@ const addSnowflake = () => {
 }
 
 window.onload = () => {
-    for (let i = 1; i <= 60; i++)
+    for (let i = 1; i <= 70; i++)
         addSnowflake()
 }
 
