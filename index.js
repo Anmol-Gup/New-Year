@@ -25,6 +25,8 @@ document.querySelector('button').addEventListener('click', (e) => {
     if (count === color.length)
         count = 0;
     else {
+
+        e.target.innerText='Click Again'
         const newyear = document.querySelector('#newyear')
         setColor(newyear, color[count])
 
