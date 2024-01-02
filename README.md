@@ -6,6 +6,7 @@ This is a small project to display New Year wishes using HTML, CSS, and JavaScri
 
 ## Demo
 https://anmol-gup.github.io/new-year/
+
 https://youtu.be/c-M2tBQa1X8
 
 ## Project Structure
